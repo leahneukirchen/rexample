@@ -94,7 +94,7 @@ module For
       end
     end
 
-    def all_examples
+    def run_all_examples
       EXAMPLES.each_value { |example|
         example.call  unless example.run?
       }
@@ -106,3 +106,10 @@ module For
   end
 
 end
+
+module Examples
+  def self.run
+    For.run_all_examples
+  end
+end
+  

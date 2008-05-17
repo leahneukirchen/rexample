@@ -41,4 +41,4 @@ For.example "popping on empty stack fails" do
   end
 end
 
-For.all_examples
+Examples.run
