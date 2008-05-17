@@ -7,14 +7,14 @@ class Stack < Array
   end
 end
 
-example "an empty stack" do
+For.example "an empty stack" do
   stack = Stack.new
   assert stack.empty?
   
   stack
 end
 
-example "pushing an element" do
+For.example "pushing an element" do
   stack = given "an empty stack"
   stack.push :foo
   
@@ -24,7 +24,7 @@ example "pushing an element" do
   stack
 end
 
-example "popping an element" do
+For.example "popping an element" do
   stack = given "pushing an element"
   value = stack.pop
   
@@ -34,11 +34,11 @@ example "popping an element" do
   stack
 end
 
-example "popping on empty stack fails" do
+For.example "popping on empty stack fails" do
   stack = given "an empty stack"
   expect ArgumentError do
     stack.pop
   end
 end
 
-for_example
+For.all_examples
